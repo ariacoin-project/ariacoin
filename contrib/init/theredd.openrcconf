@@ -1,0 +1,26 @@
+# /etc/conf.d/ariacoind: config file for /etc/init.d/ariacoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/ariacoin/ariacoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ariacoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ariacoind.pid"
+
+# Where to write ariacoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ariacoind"
+
+# User and group to own ariacoind process
+#BITCOIND_USER="ariacoin"
+#BITCOIND_GROUP="ariacoin"
+
+# Path to ariacoind executable
+#BITCOIND_BIN="/usr/bin/ariacoind"
+
+# Nice value to run ariacoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

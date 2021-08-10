@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ariacoin
+Comment=ariacoin P2P Cryptocurrency
+Comment[fr]=ariacoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ariacoin, eşten eşe kriptografik sanal para birimi
+Exec=ariacoin-qt %u
+Terminal=false
+Type=Application
+Icon=ariacoin128
+MimeType=x-scheme-handler/ariacoin;
+Categories=Office;Finance;

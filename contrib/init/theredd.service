@@ -1,0 +1,26 @@
+[Unit]
+Description=ariacoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=ariacoin
+Group=ariacoin
+
+Type=forking
+PIDFile=/var/lib/ariacoind/ariacoind.pid
+
+ExecStart=/usr/bin/ariacoind -daemon -pid=/var/lib/ariacoind/ariacoind.pid \
+          -conf=/etc/ariacoin/ariacoin.conf -datadir=/var/lib/ariacoind
+
+ExecStop=-/usr/bin/ariacoin-cli -conf=/etc/ariacoin/ariacoin.conf \
+         -datadir=/var/lib/ariacoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
